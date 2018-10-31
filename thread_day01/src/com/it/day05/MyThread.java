@@ -3,7 +3,7 @@ package com.it.day05;/**
  */
 
 /**
- * @ClassName MyThread
+ * @ClassName MyThread2
  * @Description TODO
  * @Author sunrise
  * @Date 2018/10/15 10:52

@@ -28,12 +28,22 @@ public class StringPrint {
                 e.printStackTrace();
             }
         }
+        System.out.println(Thread.currentThread().getName()+"结束运行");
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         StringPrint stringPrint = new StringPrint();
         //死循环
-        stringPrint.printStringMethod();
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                stringPrint.printStringMethod();
+            }
+        }).start();
+
+        Thread.sleep(2000);
         stringPrint.setCountinuePrint(false);
+        while (true) {
+        }
     }
 }
